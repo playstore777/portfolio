@@ -1,3 +1,3 @@
-import { Card, SectionHeader } from "@/shared/ui";
+import { Card, CardHeader, SectionHeader, TechIcon } from "@/shared/ui";
 
-export { Card, SectionHeader };
+export { Card, CardHeader, SectionHeader, TechIcon };

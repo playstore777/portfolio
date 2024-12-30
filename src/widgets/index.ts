@@ -1,3 +1,5 @@
+import { ProjectDetails } from "@/widgets/project-details";
+import { ProjectsSection } from "@/widgets/projects";
 import { CuteCandles } from "@/widgets/candles";
 import { HeroSection } from "@/widgets/hero";
 import { Header } from "@/widgets/header";
@@ -7,5 +9,7 @@ export {
   Header,
   HeroSection,
   CuteCandles,
- Footer,
+  ProjectsSection,
+  ProjectDetails,
+  Footer,
 };

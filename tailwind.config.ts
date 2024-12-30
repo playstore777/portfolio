@@ -21,15 +21,25 @@ const config: Config = {
       },
     },
     extend: {
-      
+      backgroundImage: {
+        "radial-gradient-circle":
+          "radial-gradient(circle, var(--tw-gradient-from), var(--tw-gradient-to))",
+      },
       cursor: {
         shh: "url('/shushing-face.svg'), pointer",
+      },
+      transform: {
+        "rotate-x-69": "rotateX(69deg)",
       },
       fontFamily: {
         sans: "var(--font-sans)",
         serif: "var(--font-serif)",
       },
       animation: {
+        "scroll-left": "scroll-left 1s linear infinite",
+        "scroll-right": "scroll-left 1s linear reverse infinite",
+        flicker: "flicker 0.2s infinite alternate",
+        "flicker-rotated": "flicker-rotated 0.2s infinite alternate",
         dash: "dash 7s linear",
         opacity: "opacity 1s ease-in-out",
         "change-background": "change-background 3s linear",
@@ -52,6 +62,26 @@ const config: Config = {
         "scroll-left": {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
+        },
+        flicker: {
+          "0%": {
+            transform: "translateX(-50%) scale(1)",
+            opacity: "0.9",
+          },
+          "100%": {
+            transform: "translateX(-50%) scale(1.1)",
+            opacity: "1",
+          },
+        },
+        "flicker-rotated": {
+          "0%": {
+            transform: "translateX(-50%) rotate(90deg) scale(1)",
+            opacity: "0.9",
+          },
+          "100%": {
+            transform: "translateX(-50%) rotate(90deg) scale(1.1)",
+            opacity: "1",
+          },
         },
         dash: {
           from: {
@@ -472,6 +502,17 @@ const config: Config = {
   },
   plugins: [
     require("@tailwindcss/typography"),
+    function ({
+      addUtilities,
+    }: {
+      addUtilities: (utilities: Record<string, any>) => void;
+    }) {
+      addUtilities({
+        ".rotate-x-69": {
+          transform: "rotateX(69deg)",
+        },
+      });
+    },
   ],
 };
 

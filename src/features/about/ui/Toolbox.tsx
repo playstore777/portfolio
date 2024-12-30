@@ -1,5 +1,5 @@
 import { ToolboxItems } from "@/features";
-import { ToolboxItem } from "@/entities/about";
+import { ToolboxItem } from "@/entities";
 
 interface props {
   items: ToolboxItem[];

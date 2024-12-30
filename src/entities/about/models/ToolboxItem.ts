@@ -7,7 +7,7 @@ import HTMLIcon from "@/shared/assets/icons/html5.svg";
 import CSSIcon from "@/shared/assets/icons/css3.svg";
 import VercelIcon from "@/shared/assets/icons/vercel-icon.svg";
 import NodeJSIcon from "@/shared/assets/icons/node-js.svg";
-import FigmaIcon from "@/shared/assets/icons/figma-1.svg";
+import FigmaIcon from "@/shared/assets/icons/figma.svg";
 
 export interface ToolboxItem {
   title: string;

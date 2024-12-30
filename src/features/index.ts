@@ -1,1 +1,2 @@
-// public api
+import { NavLink } from "@/features/header";
+export { NavLink };

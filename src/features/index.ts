@@ -1,2 +1,4 @@
+import { ActionButton, IntroText } from "@/features/hero";
 import { NavLink } from "@/features/header";
-export { NavLink };
+
+export { ActionButton, IntroText, NavLink };

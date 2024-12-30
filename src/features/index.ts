@@ -2,6 +2,7 @@ import { ActionButton, IntroText } from "@/features/hero";
 import { NavLink } from "@/features/header";
 import { ProjectCard } from "@/features/projects";
 import { HeroImage } from "@/features/project-details";
+import { SkillsArray } from "@/features/tape";
 import { FeedbackButton } from "@/features/footer";
 
 export {
@@ -10,5 +11,6 @@ export {
   NavLink,
   ProjectCard,
   HeroImage,
+  SkillsArray,
   FeedbackButton,
 };

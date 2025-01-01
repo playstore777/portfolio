@@ -3,7 +3,7 @@ interface props {}
 const IntroText: React.FC<props> = () => {
   return (
     <>
-      <h1 className="pt-24 font-serif text-4xl md:text-6xl relative">
+      <h1 className="pt-8 sm:pt-24 font-serif text-4xl md:text-6xl relative">
         👋 Hi I&apos;m A
         <span className="group">
           <span className="relative underline decoration-orange-400 hover:decoration-transparent hover:text-yellow-400 cursor-pointer">

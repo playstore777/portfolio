@@ -16,7 +16,7 @@ const Footer = () => {
     <div className="w-full h-[100vh] flex items-center justify-center">
       <div
         className={
-          "relative w-[500px] h-[500px] bg-black/60 flex justify-center items-center"
+          "relative w-[500px] h-[500px] bg-black/60 flex justify-center items-center oveflow-clip"
         }
       >
         <FeedbackButton

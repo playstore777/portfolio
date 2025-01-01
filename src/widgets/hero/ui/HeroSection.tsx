@@ -2,7 +2,6 @@
 import { useState } from "react";
 
 import { ActionButton, IntroText } from "@/features";
-import GitHubIcon from "@/shared/assets/icons/github.svg";
 import { CuteCandles } from "@/widgets";
 
 interface props {}
@@ -18,7 +17,7 @@ const HeroSection: React.FC<props> = () => {
     <div className="w-full h-[100dvh] bg-black animate-change-background relative z-10 text-white px-[12%]">
       <IntroText />
       <div
-        className={`min-w-min p-36 pl-0 md:p-44 md:pl-0 text-white w-20 flex gap-3 animate-opacity ${
+        className={`min-w-min p-20 pl-0 sm:p-44 sm:pl-0 text-white w-20 flex gap-3 animate-opacity ${
           !isSilencio && "hover:cursor-shh"
         }`}
         onClick={handleClick}
@@ -37,7 +36,6 @@ const HeroSection: React.FC<props> = () => {
           url="https://github.com/playstore777"
           animationDelay="600"
         >
-          {/* <GitHubIcon className="inline size-7" /> */}
           GitHub
         </ActionButton>
       </div>

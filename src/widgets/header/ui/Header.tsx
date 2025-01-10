@@ -9,7 +9,7 @@ const Header: React.FC<HeaderProps> = () => {
   const scrollDirection = useScrollDirection();
   return (
     <header
-      className={`sticky top-0 left-0 z-50 bg-black text-white font-serif w-full mx-auto px-[12%] animate-change-background transition-transform ${
+      className={`sticky top-0 left-0 z-50 bg-black text-white font-serif w-full mx-auto px-[12%] motion-safe:animate-change-background transition-transform ${
         scrollDirection === "up" || !scrollDirection
           ? "sticky top-0"
           : "translate-y-[-100%]"
@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = () => {
     >
       <div className="py-4 md:px-4 flex justify-between items-center max-w-[95rem] mx-auto">
         <div>
-          <a href="/">
+          <a href="/" aria-label="logo">
             <AHeart
               className="size-12 md:size-16 fill-[url(#logo-gradient)] animate-dash"
               style={{
@@ -36,10 +36,11 @@ const Header: React.FC<HeaderProps> = () => {
             </linearGradient>
           </svg>
         </div>
-        <div className="flex gap-4 text-xl md:text-2xl">
+        <nav className="flex gap-4 text-xl md:text-2xl">
+          <NavLink url="/">Home</NavLink>
           <NavLink url="/#projects">Projects</NavLink>
           <NavLink url="/#about">About</NavLink>
-        </div>
+        </nav>
       </div>
     </header>
   );

@@ -15,7 +15,10 @@ const IntroText: React.FC<props> = () => {
         </span>
       </h1>
 
-      <p className="w-4/5 md:w-4/12 text-xl md:text-2xl mt-4 md:mt-6">
+      <p
+        className="w-4/5 md:w-4/12 text-xl md:text-2xl mt-4 md:mt-6"
+        aria-label="intro"
+      >
         I&apos;m a Frontend Developer, I&apos;m passionate about programming and
         gaming, where creativity meets logic.
       </p>

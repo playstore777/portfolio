@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 interface props {
   isSilencio: boolean;
   url: string;
-  children: React.ReactNode;
+  label: string;
   handleClick: () => void;
   className?: string;
   animationDelay?: "300" | "600";
@@ -13,26 +13,26 @@ interface props {
 const ActionButton: React.FC<props> = ({
   isSilencio,
   url,
-  children,
+  label,
   className,
   animationDelay = "300",
 }) => {
   return (
-    <Link href={url}>
-      <button
+    <Link href={url} aria-label={label ? label : "Action button"}>
+      <div
         className={twMerge(
           `px-6 py-3 bg-blue-600 rounded-md ${
             isSilencio
               ? "animate-none"
-              : `motion-safe:animate-hop ${
+              : `motion-safe:md:animate-hop ${
                   animationDelay === "300"
-                    ? "motion-safe:animate-delay-300"
-                    : "motion-safe:animate-delay-600"
+                    ? "motion-safe:md:animate-delay-300"
+                    : "motion-safe:md:animate-delay-600"
                 }`
-          } before:content-["click_me"] before:absolute before:-top-1/2 before:left-[20%] before:animate-show-text ${
+          } before:content-["click_me"] before:absolute before:-top-1/2 before:left-[20%] before:md:animate-show-text ${
             animationDelay === "300"
-              ? "before:animate-delay-300"
-              : "before:animate-delay-600"
+              ? "before:md:animate-delay-300"
+              : "before:md:animate-delay-600"
           } before:text-white`,
           className
         )}
@@ -61,8 +61,8 @@ const ActionButton: React.FC<props> = ({
             }`}
           ></span>
         </div>
-        {children}
-      </button>
+        <span className="text-2xl md:text-base">{label}</span>
+      </div>
     </Link>
   );
 };

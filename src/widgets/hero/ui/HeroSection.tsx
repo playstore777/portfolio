@@ -17,7 +17,7 @@ const HeroSection: React.FC<props> = () => {
     <div className="w-full h-[100dvh] bg-black motion-safe:animate-change-background relative z-10 text-white px-[12%]">
       <IntroText />
       <div
-        className={`min-w-min p-20 pl-0 sm:p-44 sm:pl-0 text-white w-20 flex gap-3 animate-opacity ${
+        className={`min-w-min py-20 sm:p-44 sm:pl-0 text-white w-20 flex gap-3 animate-opacity ${
           !isSilencio && "hover:cursor-shh"
         }`}
         onClick={handleClick}

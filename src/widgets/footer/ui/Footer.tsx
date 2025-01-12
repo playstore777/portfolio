@@ -37,6 +37,7 @@ const Footer = () => {
             "w-4/5 h-4/5 bg-gradient-to-r from-yellow-300 to-orange-400 rounded-full rotate-x-69 z-20 opacity-20"
           }
         >
+          {/* Table leg */}
           <div
             className={
               "absolute top-full left-1/3 z-0 w-2/5 h-full bg-gray-600 rounded-md"
@@ -78,7 +79,7 @@ const Footer = () => {
             }`}
           ></div>
           <div
-            className={`absolute -top-[300%] left-1/2 -translate-x-1/2 w-[400px] h-[400px] rounded-full pointer-events-none`}
+            className={`absolute -top-[300%] left-1/2 -translate-x-1/2 w-[350px] h-[350px] sm:w-[400px] sm:h-[400px] rounded-full pointer-events-none`}
             style={{
               background:
                 "radial-gradient(circle, rgba(255, 255, 204, 0.6), transparent 70%)",

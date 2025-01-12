@@ -36,10 +36,18 @@ const Header: React.FC<HeaderProps> = () => {
             </linearGradient>
           </svg>
         </div>
-        <nav className="flex gap-4 text-xl md:text-2xl">
-          <NavLink url="/">Home</NavLink>
-          <NavLink url="/#projects">Projects</NavLink>
-          <NavLink url="/#about">About</NavLink>
+        <nav>
+          <ul className="list-none flex gap-4 text-xl md:text-2xl">
+            <li>
+              <NavLink url="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink url="/#projects">Projects</NavLink>
+            </li>
+            <li>
+              <NavLink url="/#about">About</NavLink>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
